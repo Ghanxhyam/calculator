@@ -1,0 +1,165 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #1a1a1a; 
+    font-family: 'Arial', sans-serif;
+    overflow: hidden; 
+    position: relative;
+  }
+  
+  .background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('https://i.imgur.com/3QZQZ9m.jpg'); 
+    background-size: cover;
+    background-position: center;
+    opacity: 0.3; 
+    z-index: -1; 
+  }
+  
+  .calculator {
+    background-color: rgba(44, 62, 80, 0.9); 
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+    width: 100%;
+    max-width: 320px;
+    transition: transform 0.2s ease;
+    z-index: 1; 
+  }
+  
+  .calculator:hover {
+    transform: scale(1.02); 
+  }
+  
+  #display {
+    width: 100%;
+    height: 60px;
+    background-color: #34495e; 
+    color: #27ae60; 
+    border: none;
+    text-align: right;
+    padding: 10px;
+    font-size: 28px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    box-shadow: inset 0px 0px 5px rgba(0, 0, 0, 0.3);
+  }
+  
+  .buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+  }
+  
+  button {
+    padding: 20px;
+    font-size: 18px;
+    border: none;
+    border-radius: 10px;
+    background-color: #34495e; 
+    color: #ecf0f1; 
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s, box-shadow 0.2s;
+  }
+  
+  button:hover {
+    background-color: #4a6fa5; 
+    transform: scale(1.05); 
+  }
+  
+  button:active {
+    transform: scale(0.95);
+    box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.5); 
+  }
+  
+  button.equals {
+    grid-column: span 2;
+    background-color: #27ae60; 
+  }
+  
+  button.equals:hover {
+    background-color: #2ecc71; 
+  }
+  
+  button.zero {
+    grid-column: span 2;
+  }
+  
+  button.operator {
+    background-color: #e67e22;
+  }
+  
+  button.operator:hover {
+    background-color: #d35400; 
+  }
+  
+  button.function {
+    background-color: #8e44ad; 
+  }
+  
+  button.function:hover {
+    background-color: #9b59b6; 
+  }
+  
+  
+  .breaking-bad-theme {
+    background-color: rgba(26, 26, 26, 0.9); 
+    border: 2px solid #27ae60; 
+  }
+  
+  .breaking-bad-theme #display {
+    background-color: #2c3e50;
+    color: #27ae60; 
+    font-family: 'Courier New', monospace; 
+  }
+  
+  .breaking-bad-theme button {
+    background-color: #34495e; 
+    color: #ecf0f1;
+  }
+  
+  .breaking-bad-theme button.equals {
+    background-color: #27ae60; 
+  }
+  
+  .breaking-bad-theme button.operator {
+    background-color: #e67e22; 
+  }
+  
+  .breaking-bad-theme button.function {
+    background-color: #8e44ad;
+  }
+  
+  
+  .signature {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    color: #ecf0f1; 
+    font-size: 14px;
+    opacity: 0.7;
+    font-family: 'Courier New', monospace; 
+  }
+  
+ 
+  @media (max-width: 480px) {
+    .calculator {
+      padding: 15px;
+    }
+  
+    button {
+      padding: 15px;
+      font-size: 16px;
+    }
+  
+    .signature {
+      font-size: 12px;
+    }
+  }
